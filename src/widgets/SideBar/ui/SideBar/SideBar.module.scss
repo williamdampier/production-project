@@ -7,6 +7,7 @@
   transition: width 0.4s;
   padding: 10px;
 }
+
 .collapsed {
   width: var(--sidebar-width-collapsed);
 }
@@ -17,4 +18,8 @@
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.lang {
+  margin-left: 20px;
 }
