@@ -4,6 +4,7 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import { Navbar } from 'widgets/Navbar';
 import { SideBar } from 'widgets/SideBar';
 import { Suspense, useEffect } from 'react';
+import { Button } from 'shared/ui/Button';
 import { AppRouter } from './providers/router';
 
 export default function App() {
