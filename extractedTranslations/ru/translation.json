@@ -1,8 +1,11 @@
 {
   "About Link": "About Link",
   "About Us": "About Us",
+  "Error occured": "Error occured",
   "Language": "Language",
   "Main Link": "Main Link",
   "Main Page": "Main Page",
-  "Page not found": "Page not found"
+  "Page not found": "Page not found",
+  "Refresh page": "Refresh page",
+  "throw error": "throw error"
 }
