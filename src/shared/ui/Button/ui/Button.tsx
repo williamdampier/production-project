@@ -1,9 +1,11 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './Button.module.scss';
 import { FC, ButtonHTMLAttributes } from 'react';
+import cls from './Button.module.scss';
 
 export enum ButtonTheme {
+  // eslint-disable-next-line no-unused-vars
   CLEAR = 'clear',
+  OUTLINE = 'outline'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,13 +14,16 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-  const { className, theme, children, ...otherProps } = props;
-  return (
-    <button
-      className={classNames(cls.Button, {}, [cls[theme]])}
-      {...otherProps}
-    >
-      {children}
-    </button>
-  );
+    const {
+        className, theme, children, ...otherProps
+    } = props;
+    return (
+        // eslint-disable-next-line react/button-has-type
+        <button
+            className={classNames(cls.Button, { [cls[theme!]]: true }, [className!])}
+            {...otherProps}
+        >
+            {children}
+        </button>
+    );
 };

@@ -1,0 +1,11 @@
+{
+"i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
+"stylelint.enable": true,
+"jestrunner.configPath": "/config/jest/jest.config.ts",
+"css.validate": true,
+"scss.validate": true,
+"stylelint.validate": [
+"css",
+"scss"
+],
+}
