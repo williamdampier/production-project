@@ -1,26 +1,49 @@
+/* eslint-disable no-unused-vars */
 import { classNames } from 'shared/lib/classNames/classNames';
-import { FC, ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, FC } from 'react';
 import cls from './Button.module.scss';
 
 export enum ButtonTheme {
-  // eslint-disable-next-line no-unused-vars
-  CLEAR = 'clear',
-  OUTLINE = 'outline'
+    CLEAR = 'clear',
+    OUTLINE = 'outline',
+    BACKGROUND = 'background',
+    BACKGROUND_INVERTED = 'backgroundInverted',
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
-  theme?: ButtonTheme;
+export enum ButtonSize {
+    M = 'size_m',
+    L = 'size_l',
+    XL = 'size_xl',
+}
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
+    className?: string;
+    theme?: ButtonTheme;
+    square?: boolean;
+    size?: ButtonSize;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
     const {
-        className, theme, children, ...otherProps
+        className,
+        children,
+        theme,
+        square,
+        size = ButtonSize.M,
+        ...otherProps
     } = props;
+
+    const mainTheme = theme || '';
+    const mods: Record<string, boolean | undefined> = {
+        [cls[mainTheme]]: true,
+        [cls.square]: square,
+        [cls[size]]: true,
+    };
+
     return (
-        // eslint-disable-next-line react/button-has-type
         <button
-            className={classNames(cls.Button, { [cls[theme!]]: true }, [className!])}
+            type="button"
+            className={classNames(cls.Button, mods, [className!])}
             {...otherProps}
         >
             {children}
