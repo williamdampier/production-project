@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { BugButton } from 'app/providers/ErrorBoundary/ui/BugButton';
+import { FC } from 'react';
 
-const MainPage = () => {
+const MainPage:FC = () => {
     const { t } = useTranslation('main');
     return (
         <div>

@@ -20,8 +20,10 @@ export const SideBar = ({ className }: SideBarProps) => {
                 className!,
             ])}
         >
+            {/* eslint-disable-next-line i18next/no-literal-string */}
             <button data-testid="sidebar-toggle" type="button" onClick={onToggle}>toggle</button>
             <div className={cls.switchers}>
+                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <ThemeSwitcher>TOGGLE</ThemeSwitcher>
                 <LangSwitcher className={cls.lang} />
             </div>
