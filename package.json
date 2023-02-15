@@ -12,8 +12,8 @@
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
-    "test:ui":"npx loki test",
-    "test:ui:ok":"npx loki approve",
+    "test:ui": "npx loki test",
+    "test:ui:ok": "npx loki approve",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "build-storybook": "build-storybook -c ./config/storybook"
   },
@@ -70,6 +70,7 @@
     "json-server": "^0.17.0",
     "loki": "^0.28.1",
     "mini-css-extract-plugin": "^2.5.3",
+    "postcss": "^8.4.21",
     "react-refresh": "^0.12.0",
     "reg-cli": "^0.17.6",
     "regenerator-runtime": "^0.13.9",
@@ -99,7 +100,7 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1"
   },
-    "loki": {
+  "loki": {
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.docker",
