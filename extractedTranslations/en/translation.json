@@ -3,11 +3,18 @@
   "About Us": "About Us",
   "Error occured": "Error occured",
   "Language": "Language",
+  "Login": "Login",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
+      "": ""
+    }
+  },
   "Main Link": "Main Link",
   "Main Page": "Main Page",
   "Page not found": "Page not found",
   "Refresh page": "Refresh page",
   "throw error": "throw error",
+  "Войти": "Войти",
   "Главная": "",
   "О сайте": ""
 }
