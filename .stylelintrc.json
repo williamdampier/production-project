@@ -1,9 +1,14 @@
 {
   "extends": "stylelint-config-standard-scss",
+  "plugins": [
+        "stylelint-scss",
+        "stylelint-order"
+    ],
   "rules": {
     "indentation": [4],
     "selector-class-pattern": null,
     "no-empty-source":null,
     "no-missing-end-of-source-newline":null
+
   }
 }
