@@ -3,5 +3,7 @@
   "Main Link": "Главная",
   "About Link": "О Нас",
   "throw error":"Пробросить ошибку",
-  "Login": "Войти" 
+  "Login": "Войти",
+  "decrement":"декремент",
+  "increment":"инкремент"
 }

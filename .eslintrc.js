@@ -3,9 +3,10 @@ module.exports = {
         browser: true,
         es2021: true,
         jest: true,
+        node: true,
     },
     extends: ['plugin:react/recommended', 'airbnb',
-        'plugin:i18next/recommended', 'plugin:storybook/recommended'],
+        'plugin:i18next/recommended', 'plugin:storybook/recommended', 'plugin:jest/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -14,7 +15,10 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'jest'],
+    globals: {
+        __IS_DEV__: true,
+    },
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -47,9 +51,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
     },
-    globals: {
-        __IS_DEV__: true,
-    },
+
     overrides: [{
         files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
         rules: {

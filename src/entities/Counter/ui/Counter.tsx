@@ -1,4 +1,4 @@
-import { Button } from 'shared/ui/Button/Button';
+import { Button } from 'shared/ui/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { counterActions } from '../model/slice/counterSlice';
@@ -23,8 +23,9 @@ export const Counter = () => {
             <Button
                 onClick={increment}
                 data-testid="increment-btn"
-            >
-                {t('increment')}
+            // eslint-disable-next-line react/jsx-one-expression-per-line, i18next/no-literal-string
+            >increment
+                {t('')}
             </Button>
             <Button
                 data-testid="decrement-btn"

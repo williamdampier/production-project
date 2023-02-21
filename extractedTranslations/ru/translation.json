@@ -1,4 +1,5 @@
 {
+  "": "",
   "About Link": "About Link",
   "About Us": "About Us",
   "Error occured": "Error occured",
@@ -13,6 +14,7 @@
   "Main Page": "Main Page",
   "Page not found": "Page not found",
   "Refresh page": "Refresh page",
+  "decrement": "decrement",
   "throw error": "throw error",
   "Войти": "Войти",
   "Главная": "Главная",

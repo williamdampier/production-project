@@ -4,5 +4,7 @@
   "Language": "Rus",
   "Main Link": "Main Page",
   "throw error": "throw error",
-  "Login": "Login"
+  "Login": "Login",
+  "increment": "increment",
+  "decrement": "decrement"
 }
