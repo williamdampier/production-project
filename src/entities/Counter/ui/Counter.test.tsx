@@ -4,7 +4,7 @@ import { userEvent } from '@storybook/testing-library';
 import { Counter } from './Counter';
 
 describe('Counter', () => {
-    test('test render', () => {
+    test('render', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });

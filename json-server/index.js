@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const fs = require('fs');
 const jsonServer = require('json-server');
 const path = require('path');
@@ -9,7 +10,7 @@ const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
 server.use(jsonServer.defaults({}));
 server.use(jsonServer.bodyParser);
 
-// Нужно для небольшой задержки, чтобы запрос проходил не мгновенно, имитация реального апи
+// need a small delay imitation for frontend requests
 server.use(async (req, res, next) => {
     await new Promise((res) => {
         setTimeout(res, 800);
@@ -17,7 +18,7 @@ server.use(async (req, res, next) => {
     next();
 });
 
-// Эндпоинт для логина
+// login endpoint
 server.post('/login', (req, res) => {
     try {
         const { username, password } = req.body;
@@ -39,7 +40,7 @@ server.post('/login', (req, res) => {
     }
 });
 
-// проверяем, авторизован ли пользователь
+// checking if user is authorized. simple check on header exist option. no fancy
 // eslint-disable-next-line
 server.use((req, res, next) => {
     if (!req.headers.authorization) {
@@ -51,7 +52,7 @@ server.use((req, res, next) => {
 
 server.use(router);
 
-// запуск сервера
+// launching server
 server.listen(8000, () => {
     console.log('server is running on 8000 port');
 });
