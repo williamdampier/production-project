@@ -6,5 +6,7 @@
   "throw error": "throw error",
   "Login": "Login",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Enter username": "Username",
+  "Enter password": "Password"
 }

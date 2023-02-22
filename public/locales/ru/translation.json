@@ -5,5 +5,7 @@
   "throw error":"Пробросить ошибку",
   "Login": "Войти",
   "decrement":"декремент",
-  "increment":"инкремент"
+  "increment":"инкремент",
+   "Enter username": "Имя пользователя",
+  "Enter password": "Пароль"
 }
