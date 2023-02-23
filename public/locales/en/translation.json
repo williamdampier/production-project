@@ -8,5 +8,7 @@
   "increment": "increment",
   "decrement": "decrement",
   "Enter username": "Username",
-  "Enter password": "Password"
+  "Enter password": "Password",
+  "Authorization form": "Authorization form",
+  "Incorrect username or password":"Incorrect username or password"
 }

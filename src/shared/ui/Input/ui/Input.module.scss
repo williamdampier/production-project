@@ -8,7 +8,7 @@
     outline: none;
     width: 100%;
     color: transparent;
-    text-shadow: 0 0 0 var(--primary-color);
+    text-shadow: 0 0 0 var(--secondary-color);
 
     &:focus {
         outline: none;
@@ -28,7 +28,7 @@
     position: absolute;
     height: 3px;
     width: 9px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     bottom: 0;
     left: 0;
     animation: blink 0.7s forwards infinite;

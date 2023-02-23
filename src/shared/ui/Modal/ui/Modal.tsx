@@ -55,13 +55,12 @@ export const Modal = (props: ModalProps) => {
     const onContentClick = (e: MouseEvent) => { e.stopPropagation(); };
 
     useEffect(() => {
-        // eslint-disable-next-line no-console
-        console.log('');
         if (isOpen) {
             window.addEventListener('keydown', onKeyDown);
         }
+
         return () => {
-            clearTimeout(timeRef.current);
+            clearTimeout(timeRef.current!);
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
