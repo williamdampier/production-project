@@ -9,6 +9,7 @@ type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onC
 interface InputProps extends HTMLInputProps {
     className?: string;
     value?: string;
+    // eslint-disable-next-line no-unused-vars
     onChange?: (value: string) => void;
     autofocus?: boolean;
 }
