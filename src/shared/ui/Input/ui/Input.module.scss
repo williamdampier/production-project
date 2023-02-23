@@ -1,6 +1,5 @@
 .InputWrapper {
     display: flex;
-
 }
 
 .input {
@@ -18,7 +17,6 @@
 
 .placeholder {
     margin-right: 5px;
-
 }
 
 .caretWrapper {
@@ -34,7 +32,6 @@
     bottom: 0;
     left: 0;
     animation: blink 0.7s forwards infinite;
-
 }
 
 @keyframes blink {
