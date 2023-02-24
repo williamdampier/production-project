@@ -9,6 +9,7 @@
   "Incorrect username or password": "Incorrect username or password",
   "Language": "Language",
   "Login": "Login",
+  "Logout": "Logout",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
       "": ""
@@ -21,6 +22,7 @@
   "decrement": "decrement",
   "throw error": "throw error",
   "Войти": "Войти",
+  "Выйти": "Выйти",
   "Главная": "Главная",
   "О сайте": "О сайте"
 }
