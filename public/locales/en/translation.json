@@ -1,8 +1,7 @@
 {
-  "About Link": "About Us",
-  "About Us": "",
+  "About Page": "About Us",
   "Language": "Rus",
-  "Main Link": "Main Page",
+  "Main Page": "Main Page",
   "throw error": "throw error",
   "Login": "Login",
   "increment": "increment",
@@ -11,5 +10,6 @@
   "Enter password": "Password",
   "Authorization form": "Authorization form",
   "Incorrect username or password": "Incorrect username or password",
-  "Logout": "Logout"
+  "Logout": "Logout",
+  "Profile Page":"Profile"
 }

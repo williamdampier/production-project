@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": { 
+    "first": "Vladi",
+    "lastName": "Kuban",
+    "age": 34,
+    "currency": "NZD",
+    "country": "New Zealand",
+    "city": "Auckland",
+    "username": "admin",
+    "avatar": "https://png.pngtree.com/png-clipart/20190121/ourlarge/pngtree-penguin-anthropomorphic-penguin-avatar-penguin-yellow-hat-png-image_524134.jpg"
+   }
 }

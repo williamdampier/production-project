@@ -1,6 +1,7 @@
 {
   "": "",
   "About Link": "About Link",
+  "About Link\"": "About Link\"",
   "About Us": "About Us",
   "Authorization form": "Authorization form",
   "Enter password": "Enter password",
@@ -18,6 +19,8 @@
   "Main Link": "Main Link",
   "Main Page": "Main Page",
   "Page not found": "Page not found",
+  "Profile": "Profile",
+  "Profile Page": "Profile Page",
   "Refresh page": "Refresh page",
   "decrement": "",
   "increment": "",

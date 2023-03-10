@@ -1,14 +1,15 @@
 {
   "Language": "Eng",
-  "Main Link": "Главная",
-  "About Link": "О Нас",
+  "Main Page": "Главная",
+  "About Page": "О Нас",
   "throw error":"Пробросить ошибку",
   "Login": "Войти",
   "Logout":"Выйти",
   "decrement":"декремент",
   "increment":"инкремент",
-   "Enter username": "Имя пользователя",
+  "Enter username": "Имя пользователя",
   "Enter password": "Пароль",
   "Authorization form":"Форма Авторизации",
-  "Incorrect username or password":"Неверный логин или пароль"
+  "Incorrect username or password":"Неверный логин или пароль",
+  "Profile Page": "Профиль" 
 }
