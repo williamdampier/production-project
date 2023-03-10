@@ -10,8 +10,6 @@ i18n
     .use(initReactI18next)
     .init({
         fallbackLng: 'en',
-        keySeparator: false,
-        nsSeparator: false,
         debug: __IS_DEV__,
         interpolation: { skipOnVariables: false, escapeValue: false },
         backend: {

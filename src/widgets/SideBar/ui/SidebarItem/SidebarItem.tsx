@@ -4,6 +4,7 @@ import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { SidebarItemType } from 'widgets/SideBar/model/items';
 import { FC, memo, useMemo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import i18next from 'i18next';
 import cls from './SidebarItem.module.scss';
 
 interface SidebarItemProps {
@@ -13,7 +14,7 @@ interface SidebarItemProps {
 
 export const SidebarItem = memo<FC<SidebarItemProps>>(
     ({ item, collapsed }: SidebarItemProps) => {
-        const { t, ready } = useTranslation();
+        const { t } = useTranslation('translation');
 
         if (item) {
             return (
@@ -26,7 +27,8 @@ export const SidebarItem = memo<FC<SidebarItemProps>>(
                     <item.Icon className={cls.icon} />
 
                     <span className={cls.link}>
-                        {ready && t(item.text)}
+
+                        { t(item.text)}
                     </span>
 
                 </AppLink>
