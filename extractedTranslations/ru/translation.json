@@ -6,6 +6,7 @@
   "About Us": "About Us",
   "About page": "About page",
   "Authorization form": "Authorization form",
+  "Edit": "Edit",
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Error occured": "Error occured",
@@ -25,10 +26,13 @@
   "Profile": "Profile",
   "Profile Page": "Profile Page",
   "Refresh page": "Refresh page",
+  "Your last name": "Your last name",
+  "Your name": "Your name",
   "decrement": "decrement",
   "throw error": "throw error",
   "Войти": "Войти",
   "Выйти": "Выйти",
   "Главная": "Главная",
-  "О сайте": "О сайте"
+  "О сайте": "О сайте",
+  "Увше": "Увше"
 }

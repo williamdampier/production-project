@@ -1,14 +1,15 @@
-import {
-    AnyAction,
-    CombinedState, EnhancedStore, Reducer, ReducersMapObject,
-} from '@reduxjs/toolkit';
-import { AxiosInstance } from 'axios';
+/* eslint-disable no-unused-vars */
 import { CounterSchema } from 'entities/Counter';
-import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
+import {
+    AnyAction, EnhancedStore, Reducer, ReducersMapObject,
+} from '@reduxjs/toolkit';
+import { CombinedState, Dispatch } from 'redux';
+import { ProfileSchema } from 'entities/Profile';
+import { AxiosInstance } from 'axios';
 import { To } from 'history';
-import { NavigateOptions } from 'react-router-dom';
+import { NavigateOptions } from 'react-router';
 
 export interface StateSchema {
     counter: CounterSchema;
@@ -34,10 +35,11 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 
 export interface ThunkExtraArg {
     api: AxiosInstance;
-    navigate: (to: To, options?: NavigateOptions) => void;
+    navigate?: (to: To, options?: NavigateOptions) => void;
 }
 
 export interface ThunkConfig<T> {
     rejectValue: T;
     extra: ThunkExtraArg;
+    disptach?: Dispatch;
 }

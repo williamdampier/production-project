@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import {
-    MouseEvent, ReactNode, useCallback, useEffect, useRef, useState,
+    MouseEvent, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { Portal } from 'shared/ui/Portal/ui/Portal';
 import { useTheme } from 'app/providers/ThemeProvider';
@@ -27,10 +27,10 @@ export const Modal = (props: ModalProps) => {
 
     const [isClosing, setIsClosing] = useState<boolean>(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timeRef = useRef <ReturnType<typeof setTimeout>>();
+    const timeRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
     const { theme } = useTheme();
 
-    const mods: Record<string, boolean | undefined> = {
+    const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
@@ -60,7 +60,7 @@ export const Modal = (props: ModalProps) => {
         }
 
         return () => {
-            clearTimeout(timeRef.current!);
+            clearTimeout(timeRef.current);
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);

@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import {
     ButtonHTMLAttributes, FC, ReactNode, memo,
 } from 'react';
@@ -31,14 +31,15 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 export const Button = memo<ButtonProps>(({
     className,
     children,
-    theme,
+    theme = ButtonTheme.OUTLINE,
     square,
     size = ButtonSize.M,
     disabled,
     ...otherProps
 }:ButtonProps) => {
     const mainTheme = theme || '';
-    const mods: Record<string, boolean | undefined> = {
+
+    const mods: Mods = {
         [cls[mainTheme]]: true,
         [cls.square]: square,
         [cls[size]]: true,
@@ -49,7 +50,7 @@ export const Button = memo<ButtonProps>(({
         <button
             disabled={disabled}
             type="button"
-            className={classNames(cls.Button, mods, [className!])}
+            className={classNames(cls.Button, mods, [className])}
             {...otherProps}
         >
             {children}

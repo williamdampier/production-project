@@ -11,5 +11,8 @@
   "Enter password": "Пароль",
   "Authorization form":"Форма Авторизации",
   "Incorrect username or password":"Неверный логин или пароль",
-  "Profile Page": "Профиль" 
+  "Profile Page": "Профиль",
+  "Your last name":"Ваша фамилия",
+  "Your name":"Ваше имя",
+  "Edit":"Редактировать"
 }
