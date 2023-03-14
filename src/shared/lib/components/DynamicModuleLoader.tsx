@@ -8,6 +8,7 @@ export type ReducersList = {
 }
 
 type ReducersListEntry = [StateSchemaKey, Reducer]
+
 interface DynamicModuleLoaderProps {
     reducers: ReducersList;
     removeAfterUnmount? : boolean
@@ -30,7 +31,7 @@ export const DynamicModuleLoader:FC<DynamicModuleLoaderProps> = (props) => {
         return () => {
             Object.entries(reducers).forEach(([name, reducer]:ReducersListEntry) => {
                 if (removeAfterUnmount) {
-                    store.reducerManager.remove('loginForm');
+                    store.reducerManager.remove(name);
                     dispatch({ type: `@DESTROY ${name} reducer` });
                 }
             });
