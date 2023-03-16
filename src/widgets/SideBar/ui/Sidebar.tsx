@@ -19,7 +19,9 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     };
 
     // eslint-disable-next-line max-len
-    const SideBarItemsRendered = useMemo(() => SidebarItemList.map((item) => <SidebarItem item={item} key={item.path} collapsed={collapsed} />), [collapsed]);
+    const SideBarItemsRendered = useMemo(() => SidebarItemList.map(
+        (item) => <SidebarItem item={item} key={item.path} collapsed={collapsed} />,
+    ), [collapsed]);
 
     return (
         <div
