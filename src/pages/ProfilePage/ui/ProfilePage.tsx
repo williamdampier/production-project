@@ -1,9 +1,11 @@
 import {
+    ProfileValidationErrors,
     fetchProfileData,
     getProfileError,
     getProfileForm,
     getProfileIsLoading,
     getProfileReadonly,
+    getProfileValidationErrors,
     profileActions,
     profileReducer,
 } from 'entities/Profile';
@@ -14,6 +16,8 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers:ReducersList = {
@@ -22,19 +26,22 @@ const reducers:ReducersList = {
 
 const ProfilePage:FC = () => {
     const dispatch = useAppDispatch();
+    const { t } = useTranslation('profile');
 
     const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
+    const validationErrors = useSelector(getProfileValidationErrors);
 
-    useEffect(() => { dispatch(fetchProfileData()); }, [dispatch]);
-    const onChangeFirstName = useCallback(
-        (value:string) => {
-            dispatch(profileActions.updateProfile({ first: value || '' }));
-        },
-        [dispatch],
-    );
+    const validateErrorTranslates = {
+        [ProfileValidationErrors.SERVER_ERROR]: t('Server error'),
+        [ProfileValidationErrors.INCORRECT_COUNTRY]: t('Incorrect country'),
+        [ProfileValidationErrors.NO_DATA]: t('No data'),
+        [ProfileValidationErrors.INCORRECT_NAME]: t('Incorrect name'),
+        [ProfileValidationErrors.INCORRECT_AGE]: t('Incorrect age'),
+    };
+
     const onChangeLastName = useCallback(
         (value:string) => {
             dispatch(profileActions.updateProfile({ lastName: value || '' }));
@@ -77,8 +84,20 @@ const ProfilePage:FC = () => {
     const onChangeCountry = useCallback((country: Country) => {
         dispatch(profileActions.updateProfile({ country }));
     }, [dispatch]);
+
+    useEffect(() => { dispatch(fetchProfileData()); }, [dispatch]);
+    const onChangeFirstName = useCallback(
+        (value:string) => {
+            dispatch(profileActions.updateProfile({ first: value || '' }));
+        },
+        [dispatch],
+    );
+
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+            {validationErrors?.length && validationErrors.map((err) => (
+                <Text theme={TextTheme.ERROR} text={validateErrorTranslates[err]} key={err} />
+            ))}
             <ProfilePageHeader />
             <ProfileCard
                 error={error}

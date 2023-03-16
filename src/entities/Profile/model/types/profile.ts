@@ -1,6 +1,15 @@
+/* eslint-disable no-unused-vars */
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 
+export enum ProfileValidationErrors {
+    NO_DATA = 'NO_DATA',
+    INCORRECT_AGE = 'INCORRECT_AGE',
+    INCORRECT_NAME = 'INCORRECT_NAME',
+    INCORRECT_COUNTRY = 'INCORRECT_COUNTRY',
+    SERVER_ERROR = 'SERVER_ERROR'
+
+}
 export interface Profile {
     first?: string;
     lastName?: string;
@@ -17,5 +26,7 @@ export interface ProfileSchema {
     form?:Profile,
     isLoading: boolean;
     error? : string;
-    readonly:boolean
+    readonly:boolean;
+    validateErrors?: ProfileValidationErrors[];
+
 }
