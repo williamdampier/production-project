@@ -25,14 +25,10 @@
       "password": "123"
     }
   ],
-  "profile": { 
-    "first": "Vladi",
-    "lastName": "Kuban",
+  "profile": {
+    "city": "Nelson",
     "age": 34,
-    "currency": "NZD",
-    "country": "New Zealand",
-    "city": "Auckland",
-    "username": "admin",
-    "avatar": "https://png.pngtree.com/png-clipart/20190121/ourlarge/pngtree-penguin-anthropomorphic-penguin-avatar-penguin-yellow-hat-png-image_524134.jpg"
-   }
+    "first": "Vladi",
+    "lastName": "Kuban"
+  }
 }
