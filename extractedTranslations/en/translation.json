@@ -7,6 +7,7 @@
   "About page": "About page",
   "Authorization form": "Authorization form",
   "Cancel": "Cancel",
+  "Currency": "Currency",
   "Edit": "Edit",
   "Enter password": "Enter password",
   "Enter username": "Enter username",
@@ -30,9 +31,11 @@
   "Refresh page": "Refresh page",
   "Save": "Save",
   "Your Age": "Your Age",
+  "Your avatar": "Your avatar",
   "Your city": "Your city",
   "Your last name": "Your last name",
   "Your name": "Your name",
+  "Your username": "Your username",
   "decrement": "",
   "increment": "",
   "throw error": "throw error",
@@ -40,5 +43,7 @@
   "Выйти": "Выйти",
   "Главная": "",
   "О сайте": "",
-  "Увше": "Увше"
+  "Увше": "Увше",
+  "Укажите валюту": "Укажите валюту",
+  "Укажите страну": "Укажите страну"
 }
