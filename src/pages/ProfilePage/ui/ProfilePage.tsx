@@ -4,7 +4,7 @@ import {
     getProfileError,
     getProfileForm,
     getProfileIsLoading,
-    getProfileReadonly,
+    getProfileReadOnly,
     getProfileValidationErrors,
     profileActions,
     profileReducer,
@@ -31,7 +31,7 @@ const ProfilePage:FC = () => {
     const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
-    const readonly = useSelector(getProfileReadonly);
+    const readonly = useSelector(getProfileReadOnly);
     const validationErrors = useSelector(getProfileValidationErrors);
 
     const validateErrorTranslates = {
@@ -85,13 +85,16 @@ const ProfilePage:FC = () => {
         dispatch(profileActions.updateProfile({ country }));
     }, [dispatch]);
 
-    useEffect(() => { dispatch(fetchProfileData()); }, [dispatch]);
     const onChangeFirstName = useCallback(
         (value:string) => {
             dispatch(profileActions.updateProfile({ first: value || '' }));
         },
         [dispatch],
     );
+
+    useEffect(() => {
+        if (__PROJECT__ !== 'storybook') { dispatch(fetchProfileData()); }
+    }, [dispatch]);
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>

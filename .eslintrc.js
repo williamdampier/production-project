@@ -19,7 +19,7 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'jest'],
     globals: {
-        __IS_DEV__: true, __API__: true,
+        __IS_DEV__: true, __API__: true, __PROJECT__: true,
     },
     rules: {
         'react/jsx-indent': [2, 4],
