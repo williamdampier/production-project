@@ -1,6 +1,5 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import { StateSchema } from 'app/providers/StoreProvider';
 import { ProfileSchema, ProfileValidationErrors } from '../types/profile';
 import { profileActions, profileReducer } from './profileSlice';
 import { updateProfileData } from '../service/updateProfileData/updateProfileData';
