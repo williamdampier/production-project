@@ -9,6 +9,7 @@ import { AppRouter } from './providers/router';
 export default function App() {
     const dispatch = useDispatch();
     const inited = useSelector(getUserAuthInited);
+
     useEffect(() => {
         dispatch(userActions.initAuthData());
     }, [dispatch]);

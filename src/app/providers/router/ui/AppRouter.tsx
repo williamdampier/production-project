@@ -1,5 +1,5 @@
 import {
-    FC, Suspense, memo, useCallback, useMemo,
+    FC, Suspense, memo, useCallback,
 } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { PageLoader } from 'widgets/PageLoader';
