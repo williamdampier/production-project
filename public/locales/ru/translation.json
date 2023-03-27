@@ -13,5 +13,7 @@
   "Incorrect username or password": "Неверный логин или пароль",
   "Profile Page": "Профиль",
     "Currency": "Валюта",
-  "Choose country": "Выберите страну"
+  "Choose country": "Выберите страну",
+  "Articles":"Статьи",
+  "Article":"Статья"
 }
