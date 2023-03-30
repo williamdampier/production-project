@@ -1,4 +1,6 @@
 {
-    "Article":"Article", 
-    "Articles":"Articles"
+  "Article": "Article",
+  "Articles": "Articles",
+  "Error occured": "Article not found",
+  "Error": "Article load error"
 }

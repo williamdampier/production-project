@@ -40,7 +40,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'linebreak-style': 0,
-        'i18next/no-literal-string': ['error', {
+        'i18next/no-literal-string': ['warn', {
             markupOnly: true,
             ignoreAttribute: ['data-testid', 'to'],
         }],

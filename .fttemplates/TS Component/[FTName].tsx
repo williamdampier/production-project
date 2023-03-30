@@ -13,7 +13,7 @@ export const [FTName]: FC<[FTName]Props> = (props) => {
 
    return (
       <div className={classNames(cls.[FTName | camelcase], {}, [className])}>
-
+         [FTName]
       </div>
    );
 }

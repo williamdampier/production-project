@@ -9,4 +9,12 @@
 "scss"
 ],
 "i18n-ally.keystyle": "flat",
+"i18n-ally.extract.ignored": [
+    "should work with empty state error",
+    "should return error",
+    "should return isLoading",
+    "should work with empty state isLoading",
+    "should work with empty state data",
+    "should return data"
+],
 }
