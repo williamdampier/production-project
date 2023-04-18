@@ -108,12 +108,15 @@
     {
       "id": "1",
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "avatar": "https://cdn.dribbble.com/users/1044993/screenshots/5848337/media/e622397eb9c1a14f1c59ac6bd36e3522.png?compress=1&resize=400x300&vertical=top"
+
     },
     {
       "id":"2",
       "username":"user",
-      "password":"321"
+      "password":"321",
+      "avatar": "https://cdn.dribbble.com/users/1044993/screenshots/5848337/media/e622397eb9c1a14f1c59ac6bd36e3522.png?compress=1&resize=400x300&vertical=top"
     }
   ],
   "profile": {

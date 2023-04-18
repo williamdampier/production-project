@@ -2,5 +2,7 @@
   "Article": "Article",
   "Articles": "Articles",
   "Error occured": "Article not found",
-  "Error": "Article load error"
+  "Error": "Article load error",
+  "Comments": "Comments",
+  "No comments": "No comments"
 }

@@ -45,7 +45,7 @@ module.exports = {
             ignoreAttribute: ['data-testid', 'to'],
         }],
         'max-len': ['error', {
-            code: 120,
+            code: 180,
             ignoreComments: true,
         }],
         'jsx-a11y/no-static-element-interactions': 'off',
