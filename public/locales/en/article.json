@@ -4,5 +4,7 @@
   "Error occured": "Article not found",
   "Error": "Article load error",
   "Comments": "Comments",
-  "No comments": "No comments"
+  "No comments": "No comments",
+  "article.Comments": "Comments",
+  "article.Error occured": "Article Error Occured"
 }
