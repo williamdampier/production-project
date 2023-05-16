@@ -44,6 +44,7 @@ module.exports = {
             markupOnly: true,
             ignoreAttribute: ['data-testid', 'to'],
         }],
+        'i18n-ally-hard-string': 'off',
         'max-len': ['error', {
             code: 180,
             ignoreComments: true,

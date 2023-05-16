@@ -18,6 +18,8 @@ import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useParams } from 'react-router-dom';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers:ReducersList = {
@@ -27,6 +29,7 @@ const reducers:ReducersList = {
 const ProfilePage:FC = () => {
     const dispatch = useAppDispatch();
     const { t } = useTranslation('profile');
+    const { id } = useParams<{id:string}>();
 
     const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
@@ -92,9 +95,9 @@ const ProfilePage:FC = () => {
         [dispatch],
     );
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') { dispatch(fetchProfileData()); }
-    }, [dispatch]);
+    useInitialEffect(() => {
+        if (id) { dispatch(fetchProfileData(id)); }
+    });
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>

@@ -17,4 +17,9 @@
     "should work with empty state data",
     "should return data"
 ],
+"i18n-ally.extract.ignoredByFiles": {
+    "src\\features\\AddCommentForm\\ui\\AddCommentForm\\AddCommentForm.tsx": [
+        "Send"
+    ]
+},
 }

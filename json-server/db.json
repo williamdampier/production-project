@@ -192,14 +192,26 @@
       "avatar": "https://cdn.dribbble.com/users/1044993/screenshots/5848337/media/e622397eb9c1a14f1c59ac6bd36e3522.png?compress=1&resize=400x300&vertical=top"
     }
   ],
-  "profile": {
+  "profile": [{
+    "id":"1",
     "city": "Nelson",
-    "age": 5,
+    "age": 35,
     "first": "Vladi",
     "lastName": "Kuban",
     "avatar": "https://cdn.dribbble.com/users/1044993/screenshots/5848337/media/e622397eb9c1a14f1c59ac6bd36e3522.png?compress=1&resize=400x300&vertical=top",
     "username": "wdampier",
     "currency": "NZD",
     "country": "New Zealand"
+  },{
+    "id":"2",
+    "city": "Auckland",
+    "age": 25,
+    "first": "Ana",
+    "lastName": "Hlopushka",
+    "avatar": "https://img.freepik.com/premium-vector/cute-orange-robot-cat-avatar_79416-86.jpg?w=740",
+    "username": "hlopushka",
+    "currency": "RUB",
+    "country": "Russia"
   }
+]
 }
