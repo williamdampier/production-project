@@ -8,6 +8,13 @@
   "Authorization form": "Authorization form",
   "Cancel": "Cancel",
   "Choose country": "Choose country",
+  "Comment": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Comments": "Comments",
   "Currency": "Currency",
   "Edit": "Edit",
@@ -38,6 +45,7 @@
   "Profile Page": "Profile Page",
   "Refresh page": "Refresh page",
   "Save": "Save",
+  "Send": "Send",
   "Server error": "Server error",
   "Your Age": "Your Age",
   "Your avatar": "Your avatar",

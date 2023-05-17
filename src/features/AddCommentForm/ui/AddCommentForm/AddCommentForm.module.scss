@@ -1,3 +1,9 @@
 .addCommentForm {
-	
+    border: 1px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
 }
+
+.input {}

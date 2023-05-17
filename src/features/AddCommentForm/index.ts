@@ -1,4 +1,4 @@
 export { AddCommentFormSchema } from './model/types/addCommentForm';
 
-export { getCommentFormError, getCommentFormText } from './model/selectors/addCommentFormSelectors';
+export { getAddCommentFormError, getAddCommentFormText } from './model/selectors/addCommentFormSelectors';
 export { AddCommentFormAsync as AddCommentForm } from './ui/AddCommentForm/AddCommentForm.async';
