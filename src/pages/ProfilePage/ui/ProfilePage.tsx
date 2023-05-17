@@ -10,7 +10,7 @@ import {
     profileReducer,
 } from 'entities/Profile';
 import { ProfileCard } from 'entities/Profile/ui/ProfileCard';
-import { FC, useCallback, useEffect } from 'react';
+import { FC, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';

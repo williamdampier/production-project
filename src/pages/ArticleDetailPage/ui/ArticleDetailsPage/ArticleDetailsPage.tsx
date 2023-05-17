@@ -7,7 +7,7 @@ import { Text } from 'shared/ui/Text/Text';
 import { CommentList } from 'entities/Comment';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader';
 import { useSelector } from 'react-redux';
-import { getArticleCommentsError, getArticleCommentsIsLoading } from 'pages/ArticleDetailPage/model/selectors/comments';
+import { getArticleCommentsIsLoading } from 'pages/ArticleDetailPage/model/selectors/comments';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { fetchCommentsByArticleId } from 'pages/ArticleDetailPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -32,7 +32,6 @@ const ArticleDetailsPage: FC<ArticleDetailPageProps> = (props) => {
     const comments = useSelector(getArticleComments.selectAll);
 
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
-    const commentsError = useSelector(getArticleCommentsError);
 
     const onSendComment = useCallback((text) => {
         dispatch(addCommentForArticle(text));
