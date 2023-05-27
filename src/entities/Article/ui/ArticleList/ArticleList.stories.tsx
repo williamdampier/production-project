@@ -114,6 +114,7 @@ ListSmall.args = {
         .fill(0)
         .map((item, index) => ({
             ...article,
+            key: index,
             id: String(index),
         })),
     isLoading: false,
@@ -126,6 +127,7 @@ ListBig.args = {
         .fill(0)
         .map((item, index) => ({
             ...article,
+            key: index,
             id: String(index),
         })),
     isLoading: false,
