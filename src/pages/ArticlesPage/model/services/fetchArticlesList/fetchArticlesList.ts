@@ -24,7 +24,7 @@ export const fetchArticlesList = createAsyncThunk<
 
                 return response.data;
             } catch (e) {
-                return rejectWithValue(`error:  ${e}`);
+                return rejectWithValue(`error${e}`);
             }
         },
     );
