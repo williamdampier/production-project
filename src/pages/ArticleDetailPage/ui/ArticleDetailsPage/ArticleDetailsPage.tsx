@@ -15,6 +15,7 @@ import { AddCommentForm } from 'features/AddCommentForm';
 import { addCommentForArticle } from 'pages/ArticleDetailPage/model/services/addCommentForArticle/addCommentForArticle';
 import { articleDetailsCommentsReducer, getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
 import cls from './ArticleDetailPage.module.scss';
+import { Page } from 'shared/ui/Page/Page';
 
 interface ArticleDetailPageProps {
    className?: string;
@@ -42,14 +43,14 @@ const ArticleDetailsPage: FC<ArticleDetailPageProps> = (props) => {
     });
     if (!id) {
         return (
-            <div className={classNames(cls.articleDetailPage, {}, [className])}>
+            <Page className={classNames(cls.articleDetailPage, {}, [className])}>
                 {t('Error occured')}
-            </div>
+            </Page>
         );
     }
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.articleDetailPage, {}, [className])}>
+            <Page className={classNames(cls.articleDetailPage, {}, [className])}>
                 <ArticleDetails id={id} />
                 <Text className={cls.title} title={t('Comments')} />
                 <AddCommentForm onSendComment={onSendComment} />
@@ -58,7 +59,7 @@ const ArticleDetailsPage: FC<ArticleDetailPageProps> = (props) => {
                     className={cls.title}
                     comments={comments}
                 />
-            </div>
+            </Page>
             {' '}
 
         </DynamicModuleLoader>
