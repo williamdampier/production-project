@@ -13,7 +13,7 @@ export function useInifniteScroll({callback, triggerRef, wrapperRef}: UseInifnit
 
     useEffect(()=>{
 
-                const wrapperElement =  wrapperRef.current;
+        const wrapperElement =  wrapperRef.current;
         const triggerElement = triggerRef.current;
 
         if (callback) {

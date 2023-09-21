@@ -10,9 +10,7 @@ import { articlesPageActions, articlesPageReducer, getArticles } from '../../mod
 import cls from './ArticlesPage.module.scss';
 import {
     getArticlesPageError,
-    getArticlesPageHasMore,
     getArticlesPageIsLoading,
-    getArticlesPageNum,
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { Page } from 'shared/ui/Page/Page';
@@ -42,14 +40,12 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     useInitialEffect(() => {
         dispatch(articlesPageActions.initState());
-        dispatch(fetchArticlesList({
-            page:1
-        }));
+        onLoadNextPart();
     });
 
-    const onLoadNextPart = useCallback(()=>{
+    const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
-    },[dispatch]);
+    }, [dispatch]);
 
     return (
         <DynamicModuleLoader reducers={reducers}>
